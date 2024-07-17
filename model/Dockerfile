@@ -15,7 +15,7 @@ ENV PATH=$PATH:/home/app/.local/bin/
 
 ADD requirements.txt .
 # Option is used to cache the pip packages
-RUN --mount=type=cache,target=/root/.cache/pip pip3 install --user --upgrade pip
+# RUN --mount=type=cache,target=/root/.cache/pip pip3 install --user --upgrade pip
 RUN pip3 install -r requirements.txt
 
 ENV PYTHONPATH=$PYTHONPATH:/src/
